@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --background: #1E202D;
+    --secondary-background: #262836;
+    --title: #8340DD;
+    --buttons: #6A4C93;
+    --white: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+body, input, textarea, button, select {
+    font-family: 'Itim', cursive;
+}
+
+body {
+    background-color: var(--background);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    margin-top: 47px;
+    margin-left: 24px;
+}
+
+#back {
+    background-color: var(--buttons);
+    width: 43.37px;
+    height: 70px;
+    border: 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transition: filter 0.2s;
+}
+
+#back:hover {
+    filter: brightness(1.2);
+}
+
+#fake-button {
+    background-color: var(--buttons);
+    min-width: 261px;
+    padding: 0 20px;
+    height: 80px;
+    border-radius: 13px;
+    margin-left: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fake-button span {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+}
+

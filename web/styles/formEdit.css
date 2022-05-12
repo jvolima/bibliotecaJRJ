@@ -1,0 +1,145 @@
+#containerForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    margin-top: 86px;
+    background-color: var(--secondary-background);
+    width: 591px;
+    height: 639px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+
+#editBook {
+    margin-top: 86px;
+    background-color: var(--secondary-background);
+    width: 591px;
+    height: 721px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+
+#containerElipse {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#elipse {
+    margin-top: -32px;
+    margin-right: -28px;
+    right: 0;
+    width: 102px;
+    height: 102px;
+    border-radius: 100%;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#elipse img {
+    width: 48px;
+    height: 35px;
+}
+
+#botaoEditar {
+    margin-top: 46px;
+    width: 278px;
+    height: 79px;
+    
+    background-color: #E76F51;
+    border-radius: 12px;
+    border: 0;
+    
+    color: var(--white);
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 400;
+    
+    transition: filter 0.2s;
+}
+
+#botaoEditar:hover {
+    filter: brightness(0.8);
+}
+
+section {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.containerInput {
+    margin-top: 15px;
+    background-color: var(--background);
+    width: 438px;
+    height: 67px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    padding: 18px;
+}
+
+.containerInput:first-child {
+    margin-top: 0px;
+}
+
+.containerInput img {
+   margin-right: 18px;
+}
+
+.containerInput input {
+    background-color: transparent;
+    width: 100%;
+    font-size: 32px;
+    line-height: 38px;
+    color: #969CB2;
+    border: 0;
+    outline: none;
+}
+
+.containerInputNumber {
+    margin-top: 15px;
+    background-color: var(--background);
+    width: 271px;
+    height: 67px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    padding: 18px;
+}
+
+.containerInputNumber input {
+    background-color: transparent;
+    width: 100%;
+    font-size: 32px;
+    line-height: 38px;
+    color: #969CB2;
+    border: 0;
+    outline: none;
+}
+
+.containerInputNumber img {
+   margin-right: 18px;
+}
+
+::-ms-reveal {
+  filter: invert(100%);
+}
+
+
+
+
+
+
+
+
