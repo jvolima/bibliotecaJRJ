@@ -14,8 +14,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Itim&family=Lexend&family=Poppins&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles/global.css">
-        <link rel="stylesheet" href="./styles/lista.css">
-        <link rel="stylesheet" href="./styles/tabelas.css">
+        <link rel="stylesheet" href="./styles/exibir.css">
+        <link rel="stylesheet" href="./styles/tables.css">
         <title>JRJ | Usuários</title>
     </head>
     <body>
