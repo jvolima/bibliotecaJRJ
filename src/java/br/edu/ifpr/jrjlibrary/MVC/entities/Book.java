@@ -15,6 +15,7 @@ public class Book {
     private String genre;
     private int year;
     private int pages;
+    private boolean isBorrowed;
     
     public Book(String title, String author, String publishingCompany, String genre, int year, int pages) {
         this.title = title;
@@ -23,6 +24,7 @@ public class Book {
         this.genre = genre;
         this.year = year;
         this.pages = pages;
+        this.isBorrowed = false;
     }
 
     public String getTitle() {
@@ -72,4 +74,12 @@ public class Book {
     public void setPages(int pages) {
         this.pages = pages;
     }
+    
+    public boolean getIsBorrowed() {
+        return isBorrowed;
+    }
+    
+    public void setIsBorrowed(boolean isBorrowed) {
+        this.isBorrowed = isBorrowed;
+    } 
 }

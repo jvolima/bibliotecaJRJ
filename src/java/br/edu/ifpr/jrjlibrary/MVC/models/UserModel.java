@@ -22,27 +22,16 @@ public class UserModel {
         users.add(user);
     }
     
-    public User findByEmail(String email) {
-        User user = null;
-        for(User u: users) {
-            if(u.getEmail().equals(email)) {
-                user = u;
-            }
-        };
-        
+    public User findByIndex(int index) {
+        User user = users.get(index);
         return user;
     }
-    
-    public void edit(String email, User userEdited) {
-        User user = findByEmail(email);
-        
-        int index = users.indexOf(user);
-        
+      
+    public void edit(int index, User userEdited) {
         users.set(index, userEdited);
     }
     
-    public void delete(String email) {
-        User user = findByEmail(email);
-        users.remove(user);
+    public void delete(int index) {
+        users.remove(index);
     }
 }

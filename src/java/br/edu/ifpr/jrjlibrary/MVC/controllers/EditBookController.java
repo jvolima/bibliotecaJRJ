@@ -21,20 +21,17 @@ import java.io.PrintWriter;
  */
 @WebServlet(name = "EditBookController", urlPatterns = {"/EditBookController"})
 public class EditBookController extends HttpServlet {
-    String oldTitle;
-    String oldAuthor;
+    int index;
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String title = request.getParameter("title");
-        String author = request.getParameter("author");
+        int index = Integer.parseInt(request.getParameter("index"));
         
         BookModel model = new BookModel();
-        Book book = model.findByTitleAndAuthor(title, author);
+        Book book = model.findByIndex(index);
         
-        oldTitle = title;
-        oldAuthor = author;
+        this.index = index;
         
         request.setAttribute("book", book);
         request.getRequestDispatcher("editarLivro.jsp").forward(request, response);
@@ -55,7 +52,7 @@ public class EditBookController extends HttpServlet {
         
         BookModel model = new BookModel();
         
-        model.edit(oldTitle, oldAuthor, bookEdited);
+        model.edit(index, bookEdited);
         response.sendRedirect("ListBooksController");
     }
 

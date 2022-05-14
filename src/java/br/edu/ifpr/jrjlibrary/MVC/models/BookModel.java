@@ -18,31 +18,26 @@ public class BookModel {
         return books;
     }
     
+    public Book findByIndex(int index) {
+        Book book = books.get(index);
+        return book;
+    }
+    
     public void create(Book b) {
         books.add(b);
     }
     
-    public Book findByTitleAndAuthor(String title, String author) {
-        Book book = null;
-        for(Book b: books) {
-            if(b.getTitle().equals(title) && b.getAuthor().equals(author)) {
-                book = b;
-            }
-        }
-        
-        return book;
-    }
-    
-    public void edit(String title, String author, Book bookEdited) {
-        Book book = findByTitleAndAuthor(title, author);
-        
-        int index = books.indexOf(book);
-        
+    public void edit(int index, Book bookEdited) {   
         books.set(index, bookEdited);
     }
     
-    public void delete(String title, String author) {
-        Book book = findByTitleAndAuthor(title, author);
-        books.remove(book);
+    public void delete(int index) {
+        books.remove(index);
+    }
+    
+    public void updateBorrowedBook(int index, boolean isBorrowed) {
+        Book book = books.get(index);
+        book.setIsBorrowed(isBorrowed);
+        books.set(index, book);
     }
 }

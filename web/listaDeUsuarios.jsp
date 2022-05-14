@@ -14,7 +14,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Itim&family=Lexend&family=Poppins&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles/global.css">
-        <link rel="stylesheet" href="./styles/listaUsuarios.css">
+        <link rel="stylesheet" href="./styles/lista.css">
         <link rel="stylesheet" href="./styles/tabelas.css">
         <title>JRJ | Usuários</title>
     </head>
@@ -41,19 +41,19 @@
                         <th>Curso</th>
                     </tr>
                     <tr></tr>
-                    <c:forEach var="user" items="${users}">
+                    <c:forEach var="user" varStatus="status" items="${users}">
                         <tr>
                             <td>${user.name}</td>
                             <td>${user.email}</td>
                             <td>${user.age}</td>
                             <td>${user.course}</td>
                             <td class="editCell">
-                                <a href="EditUserController?email=${user.email}" class="edit">
+                                <a href="EditUserController?index=${status.index}" class="edit">
                                     <img src="./images/edit.svg" alt="Editar" />
                                 </a>
                             </td>
                             <td class="deleteCell">
-                                <a href="DeleteUserController?email=${user.email}" class="delete">
+                                <a href="DeleteUserController?index=${status.index}" class="delete">
                                     <img src="./images/trash.svg" alt="Remover" />
                                 </a>
                             </td>

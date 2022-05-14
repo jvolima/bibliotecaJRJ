@@ -21,17 +21,17 @@ import java.io.PrintWriter;
  */
 @WebServlet(name = "EditUserController", urlPatterns = {"/EditUserController"})
 public class EditUserController extends HttpServlet {
-    String oldEmail;
+    int index;
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String email = request.getParameter("email");
+        int index = Integer.parseInt(request.getParameter("index"));
         
         UserModel model = new UserModel();
-        User user = model.findByEmail(email);
+        User user = model.findByIndex(index);
         
-        oldEmail = email;
+        this.index = index;
         
         request.setAttribute("user", user);
         request.getRequestDispatcher("editarUsuario.jsp").forward(request, response);
@@ -51,7 +51,7 @@ public class EditUserController extends HttpServlet {
             
         UserModel model = new UserModel();
         
-        model.edit(oldEmail, userEdited);
+        model.edit(index, userEdited);
         response.sendRedirect("ListUsersController");
     }
 

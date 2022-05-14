@@ -24,11 +24,10 @@ public class DeleteBookController extends HttpServlet {
             throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         
-        String title = request.getParameter("title");
-        String author = request.getParameter("author");
+        int index = Integer.parseInt(request.getParameter("index"));
         
         BookModel model = new BookModel();
-        model.delete(title, author);
+        model.delete(index);
         response.sendRedirect("ListBooksController");
     }
 

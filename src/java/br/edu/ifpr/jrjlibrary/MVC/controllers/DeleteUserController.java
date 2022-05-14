@@ -23,10 +23,10 @@ public class DeleteUserController extends HttpServlet {
             throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         
-        String email = request.getParameter("email");
+        int index = Integer.parseInt(request.getParameter("index"));
         
         UserModel model = new UserModel();
-        model.delete(email);
+        model.delete(index);
         response.sendRedirect("ListUsersController");
     }
 

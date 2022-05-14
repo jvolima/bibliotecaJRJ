@@ -14,14 +14,26 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Itim&family=Lexend&family=Poppins&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles/global.css">
-        <link rel="stylesheet" href="./styles/listaUsuarios.css">
+        <link rel="stylesheet" href="./styles/lista.css">
         <link rel="stylesheet" href="./styles/tabelas.css">
         <title>JRJ | Livros</title>
     </head>
     <body>
-        <header>
-            <a href="index.html" id="back"><img src="./images/arrowLeft.svg" alt="Seta apontando para a esquerda"/></a>
-            <div id="fake-button"><span>Exibir Livros</span></div>
+        <header id="headerLivros">
+            <div id="containerBack">
+                <a href="index.html" id="back"><img src="./images/arrowLeft.svg" alt="Seta apontando para a esquerda"/></a>
+                <div id="fake-button"><span>Exibir Livros</span></div>
+            </div>
+            <div id="containerFuncoes">
+                <a id="alugar" href="alugarLivros.jsp">
+                    <img class="icones" src="./images/book.svg" alt="Icone de livro" />
+                    <span class="tituloFuncao">Alugar</span>
+                </a>
+                <a id="devolver" href="">
+                    <img class="icones" src="./images/alugarLivro.svg" alt="Icone de lugar" />
+                    <span class="tituloFuncao">Devolver</span>
+                </a>
+            </div>
         </header>
         
         <div id="container">
@@ -43,7 +55,7 @@
                         <th>Editora</th>
                     </tr>
                     <tr></tr>
-                    <c:forEach var="book" items="${books}">
+                    <c:forEach var="book" varStatus="status" items="${books}">
                         <tr>
                             <td>${book.title}</td>
                             <td>${book.genre}</td>
@@ -52,12 +64,12 @@
                             <td>${book.author}</td>
                             <td>${book.publishingCompany}</td>
                             <td class="editCell">
-                                <a href="EditBookController?title=${book.title}&author=${book.author}" class="edit">
+                                <a href="EditBookController?index=${status.index}" class="edit">
                                     <img src="./images/edit.svg" alt="Editar" />
                                 </a>
                             </td>
                             <td class="deleteCell">
-                                <a href="DeleteBookController?title=${book.title}&author=${book.author}" class="delete">
+                                <a href="DeleteBookController?index=${status.index}" class="delete">
                                     <img src="./images/trash.svg" alt="Remover" />
                                 </a>
                             </td>
