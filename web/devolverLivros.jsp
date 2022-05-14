@@ -1,6 +1,6 @@
 <%-- 
-    Document   : alugarLivros
-    Created on : 13 de mai de 2022, 20:27:59
+    Document   : devolverLivros
+    Created on : 14 de mai de 2022, 09:21:42
     Author     : jvolima
 --%>
 
@@ -10,21 +10,21 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JRJ | Alugar livros</title>
+        <title>JRJ | Devolver livros</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Itim&family=Lexend&family=Poppins&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./styles/global.css">
-        <link rel="stylesheet" href="./styles/aluguel.css"/>
+        <link rel="stylesheet" href="./styles/devolver.css">
     </head>
     <body>
         <header>
             <a href="ListBooksController" id="back"><img src="./images/arrowLeft.svg" alt="Seta apontando para a esquerda"/></a>
-            <div id="fake-button"><span>Alugar Livros</span></div>
+            <div id="fake-button"><span>Devolver Livros</span></div>
         </header>
         
         <div id="containerForm">
-            <form method="post" action="BorrowBookController">
+            <form method="post" action="GiveBackBookController">
                 <div id="containerElipse">
                     <div></div>
                     <div id="elipse">
@@ -33,20 +33,11 @@
                 </div>
                 <section>
                     <div class="containerSelect">
-                        <img src="./images/nome.svg" alt="Icone de usuario"/>
-                        <select name="userIndex">
-                            <option class="options" value="" disabled selected>Selecione um Usuário</option>
-                            <c:forEach var="user" varStatus="status" items="${users}">
-                                <option class="options" value="${status.index}">${user.name}</option>
-                            </c:forEach>
-                        </select>
-                    </div>
-                    <div class="containerSelect">
                         <img src="./images/bookAluguel.svg" alt="Icone de livro"/>
                         <select name="bookIndex" id="selectBooks">
                             <option class="options" value="" disabled selected>Selecione um Livro</option>
                             <c:forEach var="book" varStatus="status" items="${books}">
-                                <c:if test="${book.isBorrowed == false}">
+                                <c:if test="${book.isBorrowed == true}">
                                     <option class="options" value="${status.index}">${book.title}</option>
                                 </c:if>
                             </c:forEach>
@@ -54,7 +45,7 @@
                     </div>
                 </section>
                 
-                <button type="submit" id="botaoAlugar">Alugar</button>
+                <button type="submit" id="botaoDevolver">Devolver</button>
             </form>
         </div>
     </body>

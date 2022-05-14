@@ -25,11 +25,11 @@
                 <div id="fake-button"><span>Exibir Livros</span></div>
             </div>
             <div id="containerFuncoes">
-                <a id="alugar" href="alugarLivros.jsp">
+                <a id="alugar" href="ListBooksOnSelectController">
                     <img class="icones" src="./images/book.svg" alt="Icone de livro" />
                     <span class="tituloFuncao">Alugar</span>
                 </a>
-                <a id="devolver" href="">
+                <a id="devolver" href="ListBorrowedBooksController">
                     <img class="icones" src="./images/alugarLivro.svg" alt="Icone de lugar" />
                     <span class="tituloFuncao">Devolver</span>
                 </a>

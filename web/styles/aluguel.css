@@ -1,0 +1,117 @@
+#containerForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    margin-top: 222px;
+    background-color: var(--secondary-background);
+    width: 512px;
+    height: 390px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+
+#containerElipse {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#elipse {
+    margin-top: -32px;
+    margin-right: -28px;
+    right: 0;
+    width: 102px;
+    height: 102px;
+    border-radius: 100%;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#elipse img {
+    width: 48px;
+    height: 35px;
+}
+
+.containerSelect {
+    width: 408px;
+    height: 67px;
+    border-radius: 7px;
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+}
+
+.containerSelect:last-child {
+    margin-top: 12px;
+}
+
+.containerSelect img {
+    margin-left: 15px;
+    width: 25px;
+    height: 25px;
+}
+
+select {
+    max-width: 400px;
+    width: 100%;
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+
+    background: transparent;
+    outline: none;
+    color: #969CB2;
+    margin-left: 17px;
+    border: 0;
+    
+    background: url("../images/select.svg") no-repeat;
+    background-position: calc(100% - 0.75rem) center !important;
+    -moz-appearance:none !important;
+    -webkit-appearance: none !important; 
+    appearance: none !important;
+    padding-right: 3rem !important;
+}
+
+#selectBooks {
+    padding-right: 5.4rem !important;
+}
+
+.options {
+    background: var(--background)
+}
+
+.options:disabled {
+    background: #ffffff;
+}
+
+#botaoAlugar {
+    margin-top: 48px;
+    width: 278px;
+    height: 79px;
+    background: #90BE6D;
+    border-radius: 12px;
+    border: 0;
+    
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: var(--white);
+    transition: filter 0.2s;
+}
+
+#botaoAlugar:hover {
+    filter: brightness(0.8);
+}

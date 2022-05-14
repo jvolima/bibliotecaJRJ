@@ -18,6 +18,17 @@ public class BookModel {
         return books;
     }
     
+    public ArrayList<Book> getAvailableBooks() {
+        ArrayList<Book> availableBooks = new ArrayList();
+        for(Book book: books) {
+            if(book.getIsBorrowed() == false) {
+                availableBooks.add(book);
+            }
+        }
+        
+        return availableBooks;
+    }
+    
     public Book findByIndex(int index) {
         Book book = books.get(index);
         return book;
