@@ -48,10 +48,12 @@ public class EditBookController extends HttpServlet {
         String newPublishingCompany = request.getParameter("publishing_company");
         int newPages = Integer.parseInt(request.getParameter("pages"));
         int newYear = Integer.parseInt(request.getParameter("year"));
-        Book bookEdited = new Book(newTitle, newAuthor, newPublishingCompany, newGenre, newYear, newPages);
         
         BookModel model = new BookModel();
+        Book oldBook = model.findByIndex(index);
         
+        Book bookEdited = new Book(newTitle, newAuthor, newPublishingCompany, newGenre, newYear, newPages, oldBook.getIsBorrowed());
+                
         model.edit(index, bookEdited);
         response.sendRedirect("ListBooksController");
     }

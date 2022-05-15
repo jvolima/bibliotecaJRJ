@@ -26,6 +26,16 @@ public class Book {
         this.pages = pages;
         this.isBorrowed = false;
     }
+    
+    public Book(String title, String author, String publishingCompany, String genre, int year, int pages, boolean isBorrowed) {
+        this.title = title;
+        this.author = author;
+        this.publishingCompany = publishingCompany;
+        this.genre = genre;
+        this.year = year;
+        this.pages = pages;
+        this.isBorrowed = isBorrowed;
+    }
 
     public String getTitle() {
         return title;

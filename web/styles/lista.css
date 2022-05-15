@@ -1,0 +1,132 @@
+#headerLivros {
+    margin-top: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#containerBack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#containerFuncoes {
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#alugar {
+    padding: 0 13px;
+    display: flex;
+    align-items: center;
+    width: 169px;
+    height: 56px;
+    background-color: #90BE6D;
+    opacity: 0.9;
+    border: 2px solid #1B1D28;
+    border-radius: 8px;
+    
+    transition: filter 0.2s;
+}
+
+#alugar:hover {
+    filter: brightness(0.8);
+}
+
+#devolver {
+    padding: 0 13px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    width: 169px;
+    height: 56px;
+    background-color: #E76F51;
+    opacity: 0.9;
+    border: 2px solid #1B1D28;
+    border-radius: 8px;
+    
+    transition: filter 0.2s;
+}
+
+#devolver:hover {
+    filter: brightness(0.8);
+}
+
+.tituloFuncao {
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--white);
+    font-family: 'Itim', sans-serif;
+}
+
+.icones {
+    margin-right: 14px;
+    width: 22px;
+    height: 24px;
+}
+
+#container {
+    margin-top: 106px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#containerButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1092px;
+    width: 100%;
+}
+
+#add-user {
+    margin-bottom: -28px;
+    margin-right: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    width: 248px;
+    height: 58px;
+    border: 4px solid #262836;
+    border-radius: 8px;
+    
+    transition: 0.2s;
+}
+
+#add-user:hover {
+    filter: brightness(1.2);
+}
+
+#add-user img {
+    margin-right: 13px;
+}
+
+#add-user span {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+}
+
+#containerTable {
+    background-color: var(--secondary-background);
+    border-radius: 12px;
+    max-width: 1092px;
+    width: 100%;
+    min-height: 600px;
+    padding: 0 20px;
+}
+
+
+
+
+
+
+
