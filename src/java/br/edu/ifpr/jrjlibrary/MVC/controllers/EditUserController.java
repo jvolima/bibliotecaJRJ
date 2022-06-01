@@ -20,9 +20,7 @@ import java.io.PrintWriter;
  * @author jvolima
  */
 @WebServlet(name = "EditUserController", urlPatterns = {"/EditUserController"})
-public class EditUserController extends HttpServlet {
-    int index;
-    
+public class EditUserController extends HttpServlet {  
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -31,8 +29,8 @@ public class EditUserController extends HttpServlet {
         UserModel model = new UserModel();
         User user = model.findByIndex(index);
         
-        this.index = index;
         
+        request.setAttribute("index", user);
         request.setAttribute("user", user);
         request.getRequestDispatcher("editarUsuario.jsp").forward(request, response);
     }
@@ -47,6 +45,9 @@ public class EditUserController extends HttpServlet {
         String newCourse = request.getParameter("course");
         String newPassword = request.getParameter("password");
         int newAge = Integer.parseInt(request.getParameter("age"));
+        
+        int index = Integer.parseInt(request.getParameter("index"));
+        
         User userEdited = new User(newName, newEmail, newPassword, newCourse, newAge);
             
         UserModel model = new UserModel();

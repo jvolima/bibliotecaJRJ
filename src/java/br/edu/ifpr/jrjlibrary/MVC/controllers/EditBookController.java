@@ -20,9 +20,7 @@ import java.io.PrintWriter;
  * @author jvolima
  */
 @WebServlet(name = "EditBookController", urlPatterns = {"/EditBookController"})
-public class EditBookController extends HttpServlet {
-    int index;
-    
+public class EditBookController extends HttpServlet {   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -30,9 +28,8 @@ public class EditBookController extends HttpServlet {
         
         BookModel model = new BookModel();
         Book book = model.findByIndex(index);
-        
-        this.index = index;
-        
+             
+        request.setAttribute("index", index);
         request.setAttribute("book", book);
         request.getRequestDispatcher("editarLivro.jsp").forward(request, response);
     }
@@ -48,6 +45,8 @@ public class EditBookController extends HttpServlet {
         String newPublishingCompany = request.getParameter("publishing_company");
         int newPages = Integer.parseInt(request.getParameter("pages"));
         int newYear = Integer.parseInt(request.getParameter("year"));
+        
+        int index = Integer.parseInt(request.getParameter("index"));
         
         BookModel model = new BookModel();
         Book oldBook = model.findByIndex(index);

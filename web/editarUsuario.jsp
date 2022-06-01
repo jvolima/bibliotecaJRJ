@@ -54,8 +54,7 @@
                         <input placeholder="Curso" value="${user.course}" type="text" name="course"/>
                     </div>
                   
-                    <input value="${user.email}" name="oldEmail" style="display:none"/>
-                    <input value="${user.password}" name="oldPassword" style="display:none"/>
+                    <input value="${index}" hidden name="index" />
                 </section>
                 <button type="submit" id="botaoEditar">Editar</button>
             </form>
