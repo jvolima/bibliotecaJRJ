@@ -57,6 +57,7 @@
                         <img src="./images/year.svg" alt="Icone de Ano"/>
                         <input placeholder="Ano" value="${book.year}" type="number" name="year"/>
                     </div>
+                    
                     <input value="${index}" hidden name="index" />
                 </section>
                 <button type="submit" id="botaoEditar">Editar</button>
